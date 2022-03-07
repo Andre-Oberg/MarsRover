@@ -74,4 +74,28 @@ public class MovementTest {
     public void testTurningRightAndMovingForward() {
         
     }
+    
+    public void testTurningLeftAndMovingBackwards() {
+        
+    }
+    
+    public void testTurningRightAndMovingBackwards() {
+        
+    }
+    
+    public void testMovingToLeftAtLeftEdge() {
+    
+    }
+    
+    public void testMovingToRightAtRightEdge() {
+    
+    }
+    
+    public void testMovingDownAtSouthernEdge() {
+    
+    }
+    
+    public void testMovingUpAtNorthernEdge() {
+    
+    }
 }
