@@ -63,19 +63,19 @@ public class Movement {
     public void readInput (String input) {
         switch(input) {
             case "F":
-                this.direction = input;
+                //this.direction = input;
                 moveForward();
                 break;
             case "B":
-                this.direction = input;
+                //this.direction = input;
                 moveBackward();
                 break;
             case "L":
-                this.direction = input;
+                //this.direction = input;
                 turnLeft();
                 break;
             case "R":
-                this.direction = input;
+                //this.direction = input;
                 turnRight();
                 break;
             default:

@@ -94,20 +94,35 @@ public class MovementTest {
         assertEquals("S", rover.getDirection());
     }
     
-    /*public void testTurningLeftAndMovingForward() {
+    public void testMovingForwardWhenFacingSouth() {
+        Movement rover = new Movement(3, 3, "S");
+        rover.readInput("F");
+        assertEquals("2", rover.getY());
+    }
+    
+    public void testMovingBackwardsWhenFacingEast() {
+        Movement rover = new Movement(5, 3, "E");
+        rover.readInput("B");
+        assertEquals("4", rover.getX());
+    }
+    
+    public void testTurningLeftThenMoveForwardWhenFacingEast() {
+
+        Movement rover = new Movement(3, 3, "E");
+
+        rover.readInput("L");
+
+        rover.readInput("F");
+
+        assertEquals("2", rover.getY());
         
     }
     
-    public void testTurningRightAndMovingForward() {
-        
-    }
-    
-    public void testTurningLeftAndMovingBackwards() {
-        
-    }
-    
-    public void testTurningRightAndMovingBackwards() {
-        
+    public void testMovingBackAndForthWhenFacingWest() {
+        Movement rover = new Movement(4, 5, "W");
+        rover.readInput("F");
+        rover.readInput("B");
+        assertEquals("4", rover.getX());
     }
     
     public void testMovingToLeftAtLeftEdge() {
@@ -124,5 +139,5 @@ public class MovementTest {
     
     public void testMovingUpAtNorthernEdge() {
     
-    }*/
+    }
 }
