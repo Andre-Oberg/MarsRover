@@ -63,19 +63,15 @@ public class Movement {
     public void readInput (String input) {
         switch(input) {
             case "F":
-                //this.direction = input;
                 moveForward();
                 break;
             case "B":
-                //this.direction = input;
                 moveBackward();
                 break;
             case "L":
-                //this.direction = input;
                 turnLeft();
                 break;
             case "R":
-                //this.direction = input;
                 turnRight();
                 break;
             default:
@@ -97,11 +93,41 @@ public class Movement {
     }
     
     public void moveForward() {
-        //return 0;
+        switch(this.direction) {
+            case "N":
+                this.y -= 1;
+                break;
+            case "S":
+                this.y += 1;
+                break;
+            case "E":
+                this.x += 1;
+                break;
+            case "W":
+                this.x -= 1;
+                break;
+            default:
+                System.out.println("Something went wrong");
+        }
     }
            
     public void moveBackward() {
-        
+        switch(this.direction) {
+            case "N":
+                this.y += 1;
+                break;
+            case "S":
+                this.y -= 1;
+                break;
+            case "E":
+                this.x -= 1;
+                break;
+            case "W":
+                this.x += 1;
+                break;
+            default:
+                System.out.println("Something went wrong");
+        }
     }
     
     public void turnLeft() {

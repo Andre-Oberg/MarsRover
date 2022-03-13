@@ -97,13 +97,13 @@ public class MovementTest {
     public void testMovingForwardWhenFacingSouth() {
         Movement rover = new Movement(3, 3, "S");
         rover.readInput("F");
-        assertEquals("2", rover.getY());
+        assertEquals(4, rover.getY());
     }
     
     public void testMovingBackwardsWhenFacingEast() {
         Movement rover = new Movement(5, 3, "E");
         rover.readInput("B");
-        assertEquals("4", rover.getX());
+        assertEquals(4, rover.getX());
     }
     
     public void testTurningLeftThenMoveForwardWhenFacingEast() {
@@ -114,7 +114,7 @@ public class MovementTest {
 
         rover.readInput("F");
 
-        assertEquals("2", rover.getY());
+        assertEquals(2, rover.getY());
         
     }
     
@@ -122,7 +122,31 @@ public class MovementTest {
         Movement rover = new Movement(4, 5, "W");
         rover.readInput("F");
         rover.readInput("B");
-        assertEquals("4", rover.getX());
+        assertEquals(4, rover.getX());
+    }
+    
+    public void testMovingInACircle() {
+        Movement rover = new Movement(2, 2, "E");
+        rover.readInput("F");
+        rover.readInput("F");
+        rover.readInput("R");
+        
+        rover.readInput("F");
+        rover.readInput("F");
+        rover.readInput("R");
+        
+        rover.readInput("F");
+        rover.readInput("F");
+        rover.readInput("R");
+        
+        rover.readInput("F");
+        rover.readInput("F");
+        rover.readInput("R");
+        
+        System.out.println(rover.getX());
+        System.out.println(rover.getY());
+        
+        assertEquals(2, rover.getX());
     }
     
     public void testMovingToLeftAtLeftEdge() {
