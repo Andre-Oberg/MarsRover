@@ -37,7 +37,7 @@ public class MovementTest {
     public void tearDown() throws Exception {
     }
     
-    @BeforeAll
+    /*@BeforeAll
     public static void setUpClass() {
     }
     
@@ -51,7 +51,7 @@ public class MovementTest {
     
     @AfterEach
     public void tearDown() {
-    }
+    }*/
 
     @org.junit.jupiter.api.Test
     public void testSomeMethod() {
@@ -61,13 +61,40 @@ public class MovementTest {
     
     public void testValidinItialPosition() {
         
+        Movement move = new Movement(2, 2, "W");
+        
+        Movement move1 = new Movement(1, 1, "N");
+        
+        Movement move2 = new Movement(0, 1, "S");
+        
+        Movement move3 = new Movement(5, 5, "E");
+        
+        //assertEquals(22, move.add("22"));
     }
     
     public void testInvalidInitialPosition() {
-        
+         Movement move4 = new Movement(6, 5, "W");
+         Movement move2 = new Movement(0, 1, "W");
     }
     
-    public void testTurningLeftAndMovingForward() {
+    public void testInvalidStartingDirection() {
+         Movement move4 = new Movement(1, 1, "We");
+         Movement move2 = new Movement(0, 1, "Invalid");
+    }
+    
+    public void testTurningLeftWhenFacingNorth() {
+        Movement rover = new Movement(3, 3, "N");
+        rover.turnLeft();
+        assertEquals("W", rover.getDirection());
+    }
+    
+    public void testTurningRightWhenFacingEast() {
+        Movement rover = new Movement(3, 3, "E");
+        rover.turnRight();
+        assertEquals("S", rover.getDirection());
+    }
+    
+    /*public void testTurningLeftAndMovingForward() {
         
     }
     
@@ -97,5 +124,5 @@ public class MovementTest {
     
     public void testMovingUpAtNorthernEdge() {
     
-    }
+    }*/
 }
